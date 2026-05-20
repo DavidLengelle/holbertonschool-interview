@@ -4,7 +4,6 @@
 
 def canUnlockAll(boxes):
     """Return True if all the boxes can be opened, False otherwise"""
-    
     opened = {0}
     to_check = [0]
 
