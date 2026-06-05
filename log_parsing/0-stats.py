@@ -16,6 +16,7 @@ if __name__ == "__main__":
     total_size = 0
     status_counts = {}
     count = 0
+    valid_codes = ["200", "301", "400", "401", "403", "404", "405", "500"]
 
     try:
         for line in sys.stdin:
@@ -29,10 +30,11 @@ if __name__ == "__main__":
 
             total_size += size
 
-            if code in status_counts:
-                status_counts[code] += 1
-            else:
-                status_counts[code] = 1
+            if code in valid_codes:
+                if code in status_counts:
+                    status_counts[code] += 1
+                else:
+                    status_counts[code] = 1
 
             count += 1
 
