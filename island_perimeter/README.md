@@ -81,11 +81,40 @@ Output:
 12
 ```
 
+## Bonus: C implementation
+
+The same exercise is also solved in C, as extra practice for translating the
+Python version. This is **not** part of the official project deliverable, which
+stays in Python (`0-island_perimeter.py`).
+
+Since C has no `len()`, the function receives the grid dimensions as extra
+parameters:
+
+```c
+int island_perimeter(int **grid, int height, int width);
+```
+
+Compile and run the test:
+
+```
+gcc -Wall -Werror -Wextra -pedantic 100-island_perimeter.c main.c -o island
+./island
+```
+
+Output:
+
+```
+12
+```
+
 ## Files
 
-| File                     | Description                     |
-| ------------------------ | ------------------------------- |
-| `0-island_perimeter.py`  | The `island_perimeter` function |
+| File                     | Description                             |
+| ------------------------ | --------------------------------------- |
+| `0-island_perimeter.py`  | The `island_perimeter` function (Python) |
+| `100-island_perimeter.c` | The `island_perimeter` function (C, bonus) |
+| `island_perimeter.h`     | Prototype for the C function            |
+| `main.c`                 | Test file for the C function            |
 
 ## Author
 
