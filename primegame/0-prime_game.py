@@ -1,7 +1,10 @@
 #!/usr/bin/python3
+"""Prime game winner solver"""
 
 
 def isWinner(x, nums):
+    """Return the player who wins the most rounds of the prime game"""
+
     if x < 1 or nums is None:
         return None
 
